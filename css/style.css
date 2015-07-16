@@ -1,3 +1,52 @@
-body {
-    background-color: #00540a;
+html, body{
+	height:100%;
+}
+
+body{
+	width:80%;
+	background-color: #00540a;
+	margin:auto;
+	font-family:Tahoma, Geneva, sans-serif;
+}
+
+header{
+	height:70px;
+	font-family:Verdana, Geneva, sans-serif;
+	margin-bottom:10px;
+}
+
+header h1{
+	margin:0;
+	padding:0;
+}
+
+article{
+	width:70%;
+	float:left;
+	background-color:#FCF;
+	min-height:80%;
+	padding-left:1%;
+}
+
+aside{
+  	width:28%;
+  	float:right;
+	background-color:#CFF;
+	min-height:80%;
+	padding-left:1%;	
+}
+
+footer {
+	display:block;
+	height:30px;
+	width:100%;
+ 	background-color:#3F3;
+	padding-left:1%;
+	padding-bottom:20px;
+	color:white;
+}
+
+footer a{
+	color:white;
+	text-decoration:none;
 }
