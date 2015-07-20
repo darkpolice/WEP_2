@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Contact Us</title>
+        <!-- Stylesheets -->
+		<link rel="stylesheet" type="text/css" href="css/navbar.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/form.css">
+        <!-- Navbar -->
+        <nav>
+		<div id="wrap">
+		  <ul class="navbar">
+			 <li><a href="#">Home</a></li>
+			 <li><a href="#">Attraction</a>
+				<ul>
+				   <li><a href="#">Singapore Zoo</a></li>
+				   <li><a href="#">River Safari</a></li>
+				   <li><a href="#">Night Safari</a></li>
+				   <li><a href="#">Jurong Bird Park</a></li>
+				   <li><a href="#">Gardens By the Bay</a></li>
+				</ul>         
+			 </li>
+			 <li><a href="#">Parks</a>
+			 </li>
+			 <li><a href="#">WildLife</a>
+             <ul>
+				   <li><a href="#">Animals</a></li>
+				   <li><a href="#">Plants</a></li>
+				</ul>                  
+			 </li>
+			 <li><a href="#">Contact Us</a>
+			 </li>
+			 <li><a href="#">Blog</a>         
+			 </li>
+		  </ul>
+		</div>
+	</nav>
+	</head>
+	<body>
+	<div id="form-main">
+  <div id="form-div">
+    <form class="form" id="form1">
+      
+      <p class="name">
+        <input name="name" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="Name" id="name" />
+      </p>
+      
+      <p class="email">
+        <input name="email" type="text" class="validate[required,custom[email]] feedback-input" id="email" placeholder="Email" />
+      </p>
+      
+      <p class="text">
+        <textarea name="text" class="validate[required,length[6,300]] feedback-input" id="comment" placeholder="Comment"></textarea>
+      </p>
+      
+      
+      <div class="submit">
+        <input type="submit" value="SEND" id="button-blue"/>
+        <div class="ease"></div>
+      </div>
+    </form>
+  </div>
+		</body>
+	
+
+</html>
