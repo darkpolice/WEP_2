@@ -5,3 +5,5 @@ Template: http://blog.teamtreehouse.com/create-an-absolute-basic-mobile-css-resp
 Subtle Patterns: http://subtlepatterns.com/
 
 Responsive tabs: https://github.com/samsono/Easy-Responsive-Tabs-to-Accordion
+
+Responsive images: http://stackoverflow.com/questions/20456694/grid-of-responsive-squares
