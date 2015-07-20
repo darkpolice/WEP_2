@@ -3,5 +3,5 @@ body {
 }
 
 .verticalLine {
-    border-left: thick solid #ff0000;
+    border-left: thin solid #5a5a5a;
 }

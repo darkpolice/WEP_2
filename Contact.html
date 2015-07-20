@@ -10,6 +10,13 @@
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <link rel="stylesheet" type="text/css" href="css/form.css">
 
+    <style>
+      #map-canvas {
+        width: 215px;
+        height: 215px;
+      }
+    </style>
+
 <!--[if IE]> <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </head>
 
@@ -43,7 +50,10 @@
 <section>
   <!-- Contact form -->
   <div id="form-main">
-    <form class="form" id="contactform">
+    <table>
+      <tr>
+        <td>
+              <form class="form" id="contactform">
       <p class="name">
         <input name="name" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="Name" id="name" />
       </p>
@@ -61,13 +71,40 @@
         <div class="ease"></div>
       </div>
     </form>
-          <br><br><hr><br><br>
+        </td>
+        <td style="padding-left:15px;">
+          <div class="verticalLine">
+            <br>
+            <p style="padding-left:15px;"><b>Hotline:</b> +65 1013 3476</p>
+            <p style="padding-left:15px;"><b>Email:</b> contact@nature.sg</p>
+            <p style="padding-left:15px;"><b>Address:</b> 8 Marina View,<br> #30-01, Asia Square 1,<br> Singapore 018960</p>
 
-      <p>Hotline: +65 1016 2511</p>
-      <p>Email: contact@nature.sg</p>
+            <div id="map-canvas"></div>
+
+            <br><br>
+          </div>
+        </td>
+      </tr>
+    </table>
+
   </div>
+  <div>
   <br>
 </section>
+
+  <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script>
+      function initialize() {
+        var mapCanvas = document.getElementById('map-canvas');
+        var mapOptions = {
+          center: new google.maps.LatLng(1.3000, 103.8000),
+          zoom: 12,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        var map = new google.maps.Map(mapCanvas, mapOptions)
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
 
 </body>
 </html>

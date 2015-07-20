@@ -4,9 +4,12 @@
 	text-align:center;
 }
 
+#form-right{
+
+}
+
 #form-main{
 	width:100%;
-	float:left;
 	padding-top:0px;
 	/**/
 	background-color:rgba(72,72,72,0.4);
@@ -14,12 +17,14 @@
 	padding-right:35px;
 	padding-top:35px;
 	padding-bottom:50px;
-	width: 450px;
+	/* width: 450px; */
+	width: 530px;
 	float: left;
 	left: 50%;
 	position: absolute;
   	margin-top:30px;
-	margin-left: -260px;
+  	/*	margin-left: -260px; */
+	margin-left: -300px;
   -moz-border-radius: 7px;
   -webkit-border-radius: 7px;
 }
@@ -149,7 +154,7 @@ input:focus, textarea:focus {
 }
 
 @media only screen and (max-width: 770px) {
-	#form-div{
+	#form-main{
 		left: 3%;
 		margin-right: 3%;
 		width: 88%;
