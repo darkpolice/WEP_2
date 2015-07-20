@@ -1,10 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
 
-html{    background:url(http://thekitemap.com/images/feedback-img.jpg) no-repeat;
-  background-size: cover;
-  height:100%;
-}
-
 #feedback-page{
 	text-align:center;
 }
@@ -13,9 +8,7 @@ html{    background:url(http://thekitemap.com/images/feedback-img.jpg) no-repeat
 	width:100%;
 	float:left;
 	padding-top:0px;
-}
-
-#form-div {
+	/**/
 	background-color:rgba(72,72,72,0.4);
 	padding-left:35px;
 	padding-right:35px;
@@ -25,7 +18,7 @@ html{    background:url(http://thekitemap.com/images/feedback-img.jpg) no-repeat
 	float: left;
 	left: 50%;
 	position: absolute;
-  margin-top:30px;
+  	margin-top:30px;
 	margin-left: -260px;
   -moz-border-radius: 7px;
   -webkit-border-radius: 7px;
@@ -34,7 +27,7 @@ html{    background:url(http://thekitemap.com/images/feedback-img.jpg) no-repeat
 .feedback-input {
 	color:#3c3c3c;
 	font-family: Helvetica, Arial, sans-serif;
-  font-weight:500;
+  	font-weight:500;
 	font-size: 18px;
 	border-radius: 0;
 	line-height: 22px;
@@ -143,11 +136,11 @@ input:focus, textarea:focus {
 	width: 0px;
 	height: 74px;
 	background-color: #fbfbfb;
-	-webkit-transition: .3s ease;
-	-moz-transition: .3s ease;
-	-o-transition: .3s ease;
-	-ms-transition: .3s ease;
-	transition: .3s ease;
+	-webkit-transition: .5s ease;
+	-moz-transition: .5s ease;
+	-o-transition: .5s ease;
+	-ms-transition: .5s ease;
+	transition: .5s ease;
 }
 
 .submit:hover .ease{
@@ -155,7 +148,7 @@ input:focus, textarea:focus {
   background-color:white;
 }
 
-@media only screen and (max-width: 580px) {
+@media only screen and (max-width: 770px) {
 	#form-div{
 		left: 3%;
 		margin-right: 3%;
