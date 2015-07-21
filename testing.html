@@ -1,0 +1,174 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Responsive Header Nav</title>
+
+<!-- Stylesheets -->
+<link rel="stylesheet" type="text/css" href="css/tabs.css"/>
+<link rel="stylesheet" type="text/css" href="css/navbar.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+
+<!-- Javascript -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="js/tabs.js"></script>
+
+<!--[if IE]> <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+</head>
+
+<body>
+<header> 
+  <a href="#" id="logo"></a>
+  <nav> 
+    <a href="#" id="menu-icon"></a>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#" class="current">Attraction</a></li>
+      <!-- TODO: Drop down
+      Singapore Zoo
+      River Safari
+      Night Safari
+      Jurong Bird Park
+      Garden By The Bay
+    -->
+      <li><a href="#">Parks</a></li>
+      <li><a href="#">WildLife</a></li>
+      <!-- TODO: Drop down
+      Animals
+      Plants
+    -->
+      <li><a href="contact.html">Contact Us</a></li>
+      <li><a href="#">Blog</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section>
+          <!--Horizontal Tab-->
+        <div id="parentHorizontalTab">
+            <ul class="resp-tabs-list hor_1">
+                <li>Singapore Zoo</li>
+                <li>River Safari</li>
+                <li>Night Safari</li>
+                <li>Jurong Bird Park</li>
+                <li>Garden By The Bay</li>
+            </ul>
+            <div class="resp-tabs-container hor_1">
+              <!-- Singapore Zoo -->
+                <div>
+                    <p>
+                        <div id="ChildVerticalTab_1">
+                            <ul class="resp-tabs-list ver_1">
+                                <li>Experince</li>
+                                <li>Opening Hours</li>
+                                <li>Admission Fee</li>
+                                <li>How to Get There</li>
+                                
+                            </ul>
+                            <div class="resp-tabs-container ver_1"><!--Experince -->
+                                <div>Singapore Zoo
+                                    <p>Since 1973, Singapore Zoo has been known for having among the most beautiful wildlife park settings in the world, where animals roam freely in open and naturalistic habitats.
+                                    <p>More than 2,800 animals representing over 300 species of mammals, birds and reptiles call Singapore Zoo home.
+
+                                </div>
+                                <div>
+                                    <p><!-- Opening Hours -->
+                                    Opening Hours
+                                    <br>We're open every day of the year. Here's the Singapore Zoo opening hours:
+                                    <br>Opening Time:	8.30am
+                                    <br>Closing Time:	6.00pm
+                                    <br>Ticketing Counter Operating Hours:	8.30am – 5.30pm
+                                    </p>
+                                </div>
+                                <div><!-- Admission Fee -->
+                                    <p>Price:
+                                    <br>Adult : $32
+                                    <br>Child(3-12 years old) : $21
+                                    <br>Senior Citizen : $14
+                                    </p>
+
+                                </div>
+                                <div><!-- How to Get There-->
+                                    <p>Nearest MRT stations	Connecting buses
+                                    <br>Choa Chu Kang (NS4)	927A
+                                    <br>Ang Mo Kio (NS16)	138
+                                    <br>Marsiling (NS8)	926 (operates on Sundays and Public Holidays only)
+                                    <br>Woodlands (NS9)	926 (operates on Sundays and Public Holidays only)
+                                    </p>
+                                    <p>
+                                    Self-drive / Taxi
+                                    Our parks are about a 30-minute drive away from the city. There are open-air as well as sheltered car and motorcycle parking bays located near the entrance of the park.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </p>
+                    <p>Tab 1 Container</p>
+                </div>
+                <div>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nibh urna, euismod ut ornare non, volutpat vel tortor. Integer laoreet placerat suscipit. Sed sodales scelerisque commodo. Nam porta cursus lectus. Proin nunc erat, gravida a facilisis quis, ornare id lectus. Proin consectetur nibh quis urna gravida mollis.
+                    <br>
+                    <br>
+                    <p>Tab 2 Container</p>
+                </div>
+                <div>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nibh urna, euismod ut ornare non, volutpat vel tortor. Integer laoreet placerat suscipit. Sed sodales scelerisque commodo. Nam porta cursus lectus. Proin nunc erat, gravida a facilisis quis, ornare id lectus. Proin consectetur nibh quis urna gravida mollis.
+                    <br>
+                    <br>
+                    <p>Tab 3 Container</p>
+                </div>
+            </div>
+        </div>
+</section>
+
+<!--Plug-in Initialisation-->
+  <script type="text/javascript">
+    $(document).ready(function() {
+        //Horizontal Tab
+        $('#parentHorizontalTab').easyResponsiveTabs({
+            type: 'default', //Types: default, vertical, accordion
+            width: 'auto', //auto or any width like 600px
+            fit: true, // 100% fit in a container
+            tabidentify: 'hor_1', // The tab groups identifier
+            activate: function(event) { // Callback function if tab is switched
+                var $tab = $(this);
+                var $info = $('#nested-tabInfo');
+                var $name = $('span', $info);
+                $name.text($tab.text());
+                $info.show();
+            }
+        });
+
+        // Child Tab
+        $('#ChildVerticalTab_1').easyResponsiveTabs({
+            type: 'vertical',
+            width: 'auto',
+            fit: true,
+            tabidentify: 'ver_1', // The tab groups identifier
+            activetab_bg: '#fff', // background color for active tabs in this group
+            inactive_bg: '#F5F5F5', // background color for inactive tabs in this group
+            active_border_color: '#c1c1c1', // border color for active tabs heads in this group
+            active_content_border_color: '#5AB1D0' // border color for active tabs contect in this group so that it matches the tab head border
+        });
+
+        //Vertical Tab
+        $('#parentVerticalTab').easyResponsiveTabs({
+            type: 'vertical', //Types: default, vertical, accordion
+            width: 'auto', //auto or any width like 600px
+            fit: true, // 100% fit in a container
+            closed: 'accordion', // Start closed if in accordion view
+            tabidentify: 'hor_1', // The tab groups identifier
+            activate: function(event) { // Callback function if tab is switched
+                var $tab = $(this);
+                var $info = $('#nested-tabInfo2');
+                var $name = $('span', $info);
+                $name.text($tab.text());
+                $info.show();
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
