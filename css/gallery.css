@@ -10,7 +10,7 @@
     background-repeat:no-repeat;
     background-size:cover; /* you change this to "contain" if you don't want the images to be cropped */
 }
-
+/* Images for Animals*/
 .img_1-1{background-image:url('../images/Animals/monkey.jpg');}
 .img_1-2{background-image:url('../images/Animals/sgmonkey.jpg');}
 .img_1-3{background-image:url('../images/Animals/kola.jpg');}
@@ -22,6 +22,21 @@
 .img_3-1{background-image:url('../images/Animals/parrots.jpg');}
 .img_3-2{background-image:url('../images/Animals/birds.jpg');}
 .img_3-3{background-image:url('../images/Animals/morebirds.jpg');}
+/*END*/
+
+/* Images for Plants*/
+.xmg_1-1{background-image:url('../images/Plants/orchih.jpg');}
+.xmg_1-2{background-image:url('../images/Plants/gtbb6.jpg');}
+.xmg_1-3{background-image:url('../images/Plants/gtbb4.jpg');}
+
+.xmg_2-1{background-image:url('../images/Plants/gtbb2.jpg');}
+.xmg_2-2{background-image:url('../images/Plants/gtbb8.jpg');}
+.xmg_2-3{background-image:url('../images/Plants/gtbb5.jpg');}
+
+.xmg_3-1{background-image:url('../images/Plants/gtbb3.jpg');}
+.xmg_3-2{background-image:url('../images/Plants/gtbb.jpg');}
+.xmg_3-3{background-image:url('../images/Plants/gtbb7.jpg');}
+/*END*/
 
 
 
