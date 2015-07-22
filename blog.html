@@ -7,14 +7,25 @@
 <!-- Stylesheets -->
 <link rel="stylesheet" type="text/css" href="css/navbar.css">
 <link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/screen.css">
+<link rel="stylesheet" type="text/css" href="css/grid.css">
 
-<style>
-  section {
-    margin: 80px auto 40px;
-    position: relative;
-    padding: 0px;
-  }
-</style>
+  <style>
+    .container { max-width: 90em; }
+
+    /* you only need width to set up columns; all columns are 100%-width by default, so we start
+       from a one-column mobile layout and gradually improve it according to available screen space */
+
+    @media only screen and (min-width: 34em) {
+      .feature, .info { width: 50%; }
+    }
+
+    @media only screen and (min-width: 54em) {
+      .content { width: 75%; }
+      .sidebar { width: 25%; }
+      .info    { width: 100%;   }
+    }
+  </style>
 
 <!--[if IE]> <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
@@ -38,19 +49,8 @@
     <ul>
       <li><a href="#" class="current">Home</a></li>
       <li><a href="attraction.html">Attraction</a></li>
-      <!-- TODO: Drop down
-      Singapore Zoo
-      River Safari
-      Night Safari
-      Jurong Bird Park
-      Garden By The Bay
-    -->
       <li><a href="#">Parks</a></li>
       <li><a href="wildlife.html">WildLife</a></li>
-      <!-- TODO: Drop down
-      Animals
-      Plants
-    -->
       <li><a href="contact.html">Contact Us</a></li>
       <li><a href="#">Blog</a></li>
     </ul>
@@ -58,7 +58,53 @@
 </header>
 
 <section>
-  
+  <div class="container">
+
+  <div class="row col">
+    <h1>Dead Simple Grid</h1>
+  </div>
+
+  <div class="row">
+    <div class="col content">
+      <h2>As Simple As Responsive Grids Get</h2>
+      <p class="desc">A demo of <em>Dead Simple Grid</em> by <a href="http://agafonkin.com/en">Vladimir Agafonkin</a>. <em>View the source</em> and <a href="http://github.com/mourner/dead-simple-grid">check it out on GitHub</a>!</p>
+
+      <p class="intro">Dead Simple Grid is a responsive CSS grid micro framework that is just that. Dead simple. It's the <em>Malevich's Black Square</em> of grid frameworks. It is <em>tiny</em> (about 250 bytes of CSS) and without dependencies,
+has only two classes (<code>row</code> and <code>col</code>), fluid columns with <em>fixed gutters</em>, supports <em>infinite nesting</em>, and doesn't constrain you to any column sets or media query breakpoints. It embraces concepts of progressive enhancement and mobile first, serving one-column mobile layout to older browsers (IE 6-7). IE 8 is supported if you use <a href="https://github.com/scottjehl/Respond">Respond.js</a></p>
+
+      <div class="row">
+        <div class="col feature">
+          <h4>Feature Block One</h4>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et m. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+        </div>
+
+        <div class="col feature">
+          <h4>Feature Block Two</h4>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et m. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+        </div>
+      </div>
+
+      <h3>And One Last Thing</h3>
+
+      <p>Cum sociis natoque penatibus et m. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et m. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+    </div>
+
+    <div class="col sidebar">
+      <h2>Top Posts</h2>
+      <br>
+      <p>- Link 1</p>
+      <p>- Link 1</p>
+      <p>- Link 1</p>
+
+      <br><br>
+      <h2>Year</h2>
+      <br>
+      <p>2015</p>
+      <p>2016</p>
+      <p>2017</p>
+    </div>
+  </div>
+</div>
 </section>
 
 </html>
