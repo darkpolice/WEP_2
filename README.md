@@ -13,7 +13,7 @@ CSS Filter Effect: http://html5-demos.appspot.com/static/css/filters/index.html
 
 Grid System: https://github.com/mourner/dead-simple-grid
 
-North:Admarity Park
+North:Puggol WaterWay Park
 South: Fort Canning Park
 East: East Coast Park
 West:Botanic Gardens
