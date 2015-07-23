@@ -10,6 +10,28 @@
     background-repeat:no-repeat;
     background-size:cover; /* you change this to "contain" if you don't want the images to be cropped */
 }
+
+body {
+    text-align:center;
+}
+
+/*  For responsive images */
+
+.content .rs{
+    width:auto;
+    height:auto;
+    max-height:90%;
+    max-width:100%;
+}
+/*  For responsive images as background */
+
+.bg{
+    background-position:center center;
+    background-repeat:no-repeat;
+    background-size:cover; /* you change this to "contain" if you don't want the images to be cropped */
+    color:#fff;
+}
+
 /* Images for Animals*/
 .img_1-1{background-image:url('../images/Animals/monkey.jpg');}
 .img_1-2{background-image:url('../images/Animals/sgmonkey.jpg');}
@@ -39,145 +61,28 @@
 /*END*/
 
 /* Hover effct for Animals */
-.img_1-1{opacity: 0.3;
-    filter: alpha(opacity=40);}
-.img_1-1:hover{opacity: 1.0;
-    filter: alpha(opacity=100); }    
+.img_1-1, .img_1-2, .img_1-3, .img_2-1, .img_2-2, .img_2-3, .img_3-1, .img_3-2, .img_3-3{
+    opacity: 1;
+}
 
-.img_1-2{opacity: 0.3;
-    filter: alpha(opacity=40);}
-.img_1-2:hover{opacity: 1.0;
-    filter: alpha(opacity=100); }
-
-.img_1-3{opacity: 0.3;
-    filter: alpha(opacity=40);}
-.img_1-3:hover{opacity: 1.0;
-    filter: alpha(opacity=100); }
-
-
-
-.img_2-1{opacity: 0.3;
-    filter: alpha(opacity=40);}
-.img_2-1:hover{opacity: 1.0;
-    filter: alpha(opacity=100); }
-
-.img_2-2{opacity: 0.3;
-    filter: alpha(opacity=40);}
-.img_2-2:hover{opacity: 1.0;
-    filter: alpha(opacity=100); }
-       
-.img_2-3{opacity: 0.3;
-    filter: alpha(opacity=40);}
-.img_2-3:hover{opacity: 1.0;
-    filter: alpha(opacity=100); }
-
-
-
-.img_3-1{opacity: 0.3;
-    filter: alpha(opacity=40);}
-.img_3-1:hover{opacity: 1.0;
-    filter: alpha(opacity=100); }
-
-.img_3-2{opacity: 0.3;
-    filter: alpha(opacity=40);}
-.img_3-2:hover{opacity: 1.0;
-    filter: alpha(opacity=100); }
-
-.img_3-3{opacity: 0.3;
-    filter: alpha(opacity=40);}
-.img_3-3:hover{opacity: 1.0;
-    filter: alpha(opacity=100); }
+.img_1-1:hover, .img_1-2:hover, .img_1-3:hover, .img_2-1:hover, .img_2-2:hover, .img_2-3:hover, .img_3-1:hover, .img_3-2:hover, .img_3-3:hover {
+    -webkit-filter: blur(3px) grayscale(0.3) opacity(0.9) sepia(0.2);
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
 /* End of Animals Hover Effect */
 
 /* Hover Effect for Plants */
-
-.xmg_1-1{opacity: 0.3;
-    filter: alpha(opacity=40);}
-.xmg_1-1:hover{opacity: 1.0;
-    filter: alpha(opacity=100); }
-
-.xmg_1-2{opacity: 0.3;
-    filter: alpha(opacity=40);}
-.xmg_1-2:hover{opacity: 1.0;
-    filter: alpha(opacity=100); }
-
-.xmg_1-3{opacity: 0.3;
-    filter: alpha(opacity=40);}
-.xmg_1-3:hover{opacity: 1.0;
-    filter: alpha(opacity=100); }
-
-
-.xmg_2-1{opacity: 0.3;
-    filter: alpha(opacity=40);}
-.xmg_2-1:hover{opacity: 1.0;
-    filter: alpha(opacity=100); }
-
-.xmg_2-2{opacity: 0.3;
-    filter: alpha(opacity=40);}
-.xmg_2-2:hover{opacity: 1.0;
-    filter: alpha(opacity=100); }
-
-.xmg_2-3{opacity: 0.3;
-    filter: alpha(opacity=40);}
-.xmg_2-3:hover{opacity: 1.0;
-    filter: alpha(opacity=100); }
-
-
-.xmg_3-1{opacity: 0.3;
-    filter: alpha(opacity=40);}
-.xmg_3-1:hover{opacity: 1.0;
-    filter: alpha(opacity=100); }
-
-.xmg_3-2{opacity: 0.3;
-    filter: alpha(opacity=40);}
-.xmg_3-2:hover{opacity: 1.0;
-    filter: alpha(opacity=100); }
-
-.xmg_3-3{opacity: 0.3;
-    filter: alpha(opacity=40);}.
-.xmg_3-3:hover{opacity: 1.0;
-    filter: alpha(opacity=100); }
-
-
-
-
-/*  following just for the demo */
-
-
-body {
-    font-size:20px;
-    font-family: 'Lato',verdana, sans-serif;
-    color: #fff;
-    text-align:center;
-    background:#ECECEC;
+.xmg_1-1, .xmg_1-2, .xmg_1-3, .xmg_2-1, .xmg_2-2, .xmg_2-3, .xmg_3-1, .xmg_3-2, .xmg_3-3{
+    opacity: 1;
 }
 
-#bottom {
-    clear:both;
-    margin:0 1.66%;
-    width:89.68%;
-    padding: 3.5%;
-    background-color:#1E1E1E;
-    color: #fff;
-}
-#bottom p{
-    text-align:center;
-    line-height:2em;
-}
-#bottom a{
-    color: #000;
-    text-decoration:none;
-    border:1px solid #000;
-    padding:10px 20px 12px;
-    line-height:70px;
-    background:#ccc;
-    
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-}
-
-#bottom a:hover{
-    background:#ECECEC;
-    border:1px solid #fff;
+.xmg_1-1:hover, .xmg_1-2:hover, .xmg_1-3:hover, .xmg_2-1:hover, .xmg_2-2:hover, .xmg_2-3:hover, .xmg_3-1:hover, .xmg_3-2:hover, .xmg_3-3:hover {
+    -webkit-filter: blur(3px) grayscale(0.3) opacity(0.9) sepia(0.2);
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
