@@ -19,15 +19,18 @@
         padding:5px;
         text-align:center;
         padding-left:72px;
+        
     }
     #htgtTitle{
         border-bottom:1px solid black;
         padding-left:72px;
+        color:#4C9CF1;;
+        padding-bottom:10px
     }
 
     #afTitle{
         text-align:center;
-        padding:0px 10px 5px 10px;
+        padding:10px 10px 10px 10px;
         border-top:1px solid black;
         border-bottom:1px solid grey;
     }
@@ -35,6 +38,10 @@
         text-align:center;
         padding:15px;
         border-bottom:1px solid grey;
+    }
+
+    #Title{
+        color:#4C9CF1;
     }
 </style>
 
@@ -50,14 +57,25 @@
 
     if(hours >= 8.5 && hours <= 18){
         document.getElementById("openorclose").innerHTML = "Open";
-    }else if(hours >= 9 && hours <= 18){
-        document.getElementById("openorclose-rs").innerHTML = "Open";
-    }else if(hours >=19.5 && hours <= 24){
-        document.getElementById("openorclose-ns").innerHTML = "Open";
-    }else if(hours >= 8.5 && hours <= 18){
         document.getElementById("openorclose-jbp").innerHTML = "Open";
-    }else {
+    }
+    else{
         document.getElementById("openorclose").innerHTML = "Closed";
+        document.getElementById("openorclose-jbp").innerHTML = "Closed";
+    }
+
+    if(hours >= 9 && hours <= 18){
+        document.getElementById("openorclose-rs").innerHTML = "Open";
+    }
+    else{
+        document.getElementById("openorclose-rs").innerHTML = "Closed";
+    }
+
+    if(hours >=19.5 && hours <= 24){
+        document.getElementById("openorclose-ns").innerHTML = "Open";
+    }
+    else{
+        document.getElementById("openorclose-ns").innerHTML = "Closed";
     }
 }
 </script>
@@ -114,7 +132,7 @@
                                 
                             </ul>
                             <div class="resp-tabs-container ver_1"><!-- Experience -->
-                                <div> <strong>Singapore Zoo</strong>
+                                <div> <strong id="Title">Singapore Zoo</strong>
                                     <br><br>
                                     <p>Since 1973, Singapore Zoo has been known for having among the most beautiful wildlife park settings in the world, where animals roam freely in open and naturalistic habitats.</p>
                                     <p>More than 2,800 animals representing over 300 species of mammals, birds and reptiles call Singapore Zoo home.</p>
@@ -122,7 +140,7 @@
                                 </div>
                                 <div>
                                     <p><!-- Opening Hours -->
-                                    <b>Opening Hours</b>
+                                    <b id="Title">Opening Hours</b>
                                     <br>The Singapore Zoo is open every day of the year.
                                     <br>
                                     <p>Here's the Singapore Zoo opening hours:</p>
@@ -186,7 +204,7 @@
                                 
                             </ul>
                             <div class="resp-tabs-container ver_2"><!-- Experience -->
-                                <div><strong>River Safari</strong>
+                                <div><strong id="Title">River Safari</strong>
                                     <br><br>
                                     <p>River Safari is the newest addition to Wildlife Reserves Singapore’s portfolio of award-winning parks. </p>
                                     <p>This $160-million attraction features state-of-the-art exhibit design as well as the world's largest freshwater aquarium.</p>
@@ -195,7 +213,7 @@
                                 </div>
                                 <div>
                                     <p><!-- Opening Hours -->
-                                    <b>Opening Hours</b>
+                                    <b id="Title">Opening Hours</b>
                                     <br>The River Safari is open every day of the year.
                                     <br>
                                     <p>Here's the River Safari opening hours:</p>
@@ -263,7 +281,7 @@
                                 
                             </ul>
                             <div class="resp-tabs-container ver_3"><!-- Experience -->
-                                <div><b>Night Safari</b>
+                                <div><b id="Title">Night Safari</b>
                                     <br><br>
                                     <p>Opened in 1994, Night Safari is the world’s first safari park for nocturnal animals. </p>
                                     <p>They come from all over the world to enjoy the unique experience of seeing over 2,500 animals in their naturalistic nighttime habitats.</p>
@@ -271,7 +289,7 @@
                                 </div>
                                 <div>
                                     <p><!-- Opening Hours -->
-                                    <b>Opening Hours</b>
+                                    <b id="Title">Opening Hours</b>
                                     <br>The Night Safari is open every day of the year.
                                     <br>
                                     <p>Here's the Night Safari opening hours:</p>
@@ -336,7 +354,7 @@
                                 
                             </ul>
                             <div class="resp-tabs-container ver_4"><!-- Experience -->
-                                <div><b>Jurong Bird Park</b>
+                                <div><b id="Title">Jurong Bird Park</b>
                                     <br><br>
                                     <p>Charming visitors the world over since taking flight in 1971, Jurong Bird Park is one of the most renowned bird sanctuaries with some of the largest free-flying aviaries in the world.</p>
                                     <p>In habitats that mirror their naturalistic environments, Jurong Bird Park is home to the colours of the world, as Asia’s largest bird park with a collection of more than 5,000 birds across 400 species</p>
@@ -344,7 +362,7 @@
                                 </div>
                                 <div>
                                     <p><!-- Opening Hours -->
-                                    <b>Opening Hours</b>
+                                    <b id="Title">Opening Hours</b>
                                     <br>The Jurong Bird Park is open every day of the year.
                                     <br>
                                     <p>Here's the Jurong Bird Park opening hours:</p>
@@ -403,7 +421,7 @@
                                 
                             </ul>
                             <div class="resp-tabs-container ver_5"><!-- Experience -->
-                                <div><b>Garden By The Bay</b>
+                                <div><b id="Title">Garden By The Bay</b>
                                     <br><br>
                                     <p>Gardens by the Bay brings to life NParks' vision of creating a City in a Garden</p>
                                     <p>The Gardens captures the essence of Singapore as the premier tropical Garden City with the perfect environment in which to live and work - making Singapore a leading global city of the 21st century.</p>
@@ -411,25 +429,65 @@
                                 </div>
                                 <div>
                                     <p><!-- Opening Hours -->
-                                    
+                                    <table>
+                                    <tr><th id="afTitle" colspan=2>Garden Hours</th></tr>
+                                    <tr><td id="afData" >Bay South Outdoor Gardens </td> <td id="afData" >5:00am - 2:00am, Daily </td></tr>
+                                    <tr><td id="afData" >Cooled Conservatories & OCBC Skyway </td> <td id="afData" >9:00am - 9:00pm, Daily </td></tr>
+                                    <tr><td id="afData" >Far East Organization Children's Garden </td> <td id="afData" >10:00am - 7:00pm, Tuesday* to Friday<br><p>9:00am - 9:00pm, Weekends & Public Holidays</p> </td></tr>
+                                    <tr><td id="afData" >Outdoor Gardens Audio </td> <td id="afData" >9:45am - 5:45pm, Monday to Friday<br>9:45am - 4:45pm, Saturday,Sunday, eve of and on Public Holidays </td></tr>
+                                    <tr><td id="afData" >Shuttle Service </td> <td id="afData" >9:45am - 5:45pm, Daily </td></tr>
+                                    </table>
                                     </p>
                                 </div>
                                 <div><!-- Admission Fee -->
                                     <br>
                                     <table border="1 solid black">
-                                    <tr> <td id="afTitle" style="padding-left:25px"> </td><td id="afTitle"></td> <td id="afTitle">Per Adult</td> <td id="afTitle" style="width:150px">Per Child*<br>(3-12 years old)</td> <td id="afTitle">Per Senior Citizen**</td> </tr>
-                                    <tr> <td id="afData" > </td><td id="afData">Admission Fee:</td> <td id="afData">$32</td> <td id="afData">$21</td> <td id="afData">$14</td> </tr>
+                                    <tr> <td id="afTitle" colspan=4 style="color:#4C9CF1;"><h1 style="font-size:x-large;color:#4C9CF1;">Admission Rates*</h1></td></tr>
+                                    <tr> <td id="afTitle">Attraction</td> <td id="afTitle">Adult</td> <td id="afTitle" style="width:150px">Child<br>(3-12 years old)</td> <td id="afTitle">Senior Citizen<br>(≥ 60 years old)</td> </tr>
+                                    <tr> <td id="afData">One Conservatory<p style="color:grey">Local Resident Rate**</p></td> <td id="afData">$12</td> <td id="afData">$8</td> <td id="afData">$8</td> </tr>
+                                    <tr> <td id="afData">Two Conservatory<p style="color:grey">Local Resident Rate*</p></td> <td id="afData">$20</td> <td id="afData">$12</td> <td id="afData">$15</td></tr>
+                                    <tr> <td id="afData">Two Conservatory<p style="color:grey">Standard Rate</p></td> <td id="afData">$28</td> <td id="afData">$15</td> <td id="afData">$28</td></tr>
+                                    <tr> <td id="afData">OCBC Skyway</td> <td id="afData">$5</td> <td id="afData">$3</td> <td id="afData">$5</td></tr>
+                                    <tr> <td id="afData">Outdoor Gardens Audio Tour</td> <td id="afData">$8</td> <td id="afData">$3</td> <td id="afData">$8</td></tr>
+                                    <tr> <td id="afData">Shuttle Bus Service</td> <td id="afData">$2</td> <td id="afData">$2</td> <td id="afData">$2</td></tr>
                                     </table>
                                     <br>
+                                    <p style="font-size:x-small;">*The details above reflect our standard prices and are subject to changes. Please check their announcements section on their <a href="http://www.gardensbythebay.com.sg/en/home.html">homepage</a> for the latest updates.<br>
+                                       **Singapore citizens, permanent residents and those living in Singapore, including holders of employment passes, work permits or dependent passes. Proof of residency may be required when purchasing tickets or when entering conservatories.</p>
                                     
                                 </div>
                                 <div>
                                 <!-- How to Get There-->
+                                <p style="font-size:small">18 Marina Gardens Drive Singapore 018953</p>
 
+                                <table>
+                                <tr> <th id="htgtTitle" colspan2 style="font-size:x-large;">Walking</th><th id="htgtTitle"></th> </tr>
+                                <tr> <td id="htgtData"><p><strong>From the Helix Bridge towards the Art Science Museum:</strong><br>
+                                    Follow the footpath which leads under the ECP, that will bring you directly into Bay South Garden along the waterfront.</p></td></tr>
+                                <tr> <td id="htgtData" style="border-bottom:1px solid black"><p><strong>From Marina Bay Sands:</strong><br>
+                                    Walk across the overhead bridge (Lions Bridge) located at Marina Bay Sands Hotel (open daily from 8:00 AM to 11:00 PM), or take the underground linkway via Bayfront station (Exit B). </p></td><td style="border-bottom:1px solid black"></td></tr>
+                                </table>
+
+                                <table>
+                                <tr> <th id="htgtTitle" colspan2 style="font-size:x-large;padding-top:20px;">Bus & Train</th><th id="htgtTitle"></th> </tr>
+                                <tr> <td id="htgtData"><p><strong>Via the Circle Line or Downtown Line:</strong>
+                                    
+                                            <br>
+                                                Alight at Bayfront MRT Station (CE1/DT16)<br>
+                                                Take Exit B and follow the underground linkway<br>
+                                                Exit and cross the Dragonfly Bridge or Meadow Bridge into Gardens by the Bay
+                                               
+                                            
+                                        </td>
+                                    </tr>
+
+                                <tr> <td id="htgtData" style="border-bottom:1px solid black"><p><strong>Via the East-West Line:</strong><br>
+                                    Walk across the overhead bridge (Lions Bridge) located at Marina Bay Sands Hotel (open daily from 8:00amto11:00pm)<br>Or take the underground linkway via Bayfront station (Exit B). </p></td><td style="border-bottom:1px solid black"></td></tr>
+                                </table>
                                     
                                     <p>
                                         <!-- Google Maps -->
-                                    <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d63821.12252584157!2d103.82670510977299!3d1.281653845482646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x31da1904937e1633%3A0x62099677b59fca76!2sGardens+by+the+Bay!3m2!1d1.2815683!2d103.86361319999999!5e0!3m2!1sen!2ssg!4v1437579612649" width="600" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+                                    <iframe style="padding-top:10px;"src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d63821.12252584157!2d103.82670510977299!3d1.281653845482646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x31da1904937e1633%3A0x62099677b59fca76!2sGardens+by+the+Bay!3m2!1d1.2815683!2d103.86361319999999!5e0!3m2!1sen!2ssg!4v1437579612649" width="600" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
                                     </p>
                                 </div>
                             </div>
