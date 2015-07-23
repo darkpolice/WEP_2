@@ -60,32 +60,34 @@
     console.log(hours);
 
     if(hours >= 8.5 && hours <= 18){
-        document.getElementById("openorclose").innerHTML = "Open";
-        document.getElementById("openorclose-jbp").innerHTML = "Open";
+        document.getElementById("openorclose").innerHTML = "<b style='color:green;'>Open</b>";
+        document.getElementById("openorclose-jbp").innerHTML = "<b style='color:green;'>Open</b>";
     }
     else{
-        document.getElementById("openorclose").innerHTML = "Closed";
-        document.getElementById("openorclose-jbp").innerHTML = "Closed";
+        document.getElementById("openorclose").innerHTML = "<b style='color:red;'>Closed</b>";
+        document.getElementById("openorclose-jbp").innerHTML = "<b style='color:red;'>Closed</b>";
     }
 
     if(hours >= 9 && hours <= 18){
-        document.getElementById("openorclose-rs").innerHTML = "Open";
+        document.getElementById("openorclose-rs").innerHTML = "<b style='color:green;'>Open</b>";
     }
     else{
-        document.getElementById("openorclose-rs").innerHTML = "Closed";
+        document.getElementById("openorclose-rs").innerHTML = "<b style='color:red;'>Closed</b>";
     }
 
     if(hours >=19.5 && hours <= 24){
-        document.getElementById("openorclose-ns").innerHTML = "Open";
+        document.getElementById("openorclose-ns").innerHTML = "<b style='color:green;'>Open</b>";
     }
     else{
-        document.getElementById("openorclose-ns").innerHTML = "Closed";
+        document.getElementById("openorclose-ns").innerHTML = "<b style='color:red;'>Closed</b>";
     }
 }
 </script>
 
 <!--[if IE]> <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </head>
+
+<body>
 <header> 
   <a href="index.html" id="logo"></a>
   <nav> 
@@ -107,6 +109,7 @@
       Plants
     -->
       <li><a href="contact.html">Contact Us</a></li>
+      <li><a href="blog.html">Blog</a></li>
     </ul>
   </nav>
 </header>
@@ -137,9 +140,9 @@
                                     <br><br>
                                     <p>Since 1973, Singapore Zoo has been known for having among the most beautiful wildlife park settings in the world, where animals roam freely in open and naturalistic habitats.</p>
                                     <p>More than 2,800 animals representing over 300 species of mammals, birds and reptiles call Singapore Zoo home.</p>
-                                    <p>"I enjoyed the wide varity of enclosed animals. I would defintely come back another time"</p>
-                                    <br> - Jason Lee , Taiwan
-
+                                    <br></br>
+                                    <p><i>"I enjoyed the wide varity of enclosed animals. I would defintely come back another time"</i>- Jason Lee , Taiwan
+                                    </p>
                                 </div>
                                 <div>
                                     <p><!-- Opening Hours -->
@@ -151,7 +154,7 @@
                                     <br>Closing Time:   6.00pm
                                     <br><br>Ticketing Counter Operating Hours:  8.30am – 5.30pm
                                     <br><br>
-                                    <p> Currently it is <b id="openorclose"></b> </p>
+                                    <p> Currently it is <a id="openorclose"></a> </p>
                                     </p>
                                 </div>
                                 <div><!-- Admission Fee -->
@@ -212,8 +215,8 @@
                                     <p>River Safari is the newest addition to Wildlife Reserves Singapore’s portfolio of award-winning parks. </p>
                                     <p>This $160-million attraction features state-of-the-art exhibit design as well as the world's largest freshwater aquarium.</p>
                                     <p>Housing one of the world’s largest collections of freshwater fauna, the park features over 6,000 animals including 40 threatened species.</p>
-                                    <p> "The River Safari is the magical place, i got to see the two pandas, Jia Jia and Kai Kai"</p>
-                                    <br>- Matthew Roberts, Australia
+                                    <br><br>
+                                    <p><i> "The River Safari is the magical place, i got to see the two pandas, Jia Jia and Kai Kai"</i> - Matthew Roberts,Australia</p> 
 
                                 </div>
                                 <div>
@@ -290,8 +293,8 @@
                                     <br><br>
                                     <p>Opened in 1994, Night Safari is the world’s first safari park for nocturnal animals. </p>
                                     <p>They come from all over the world to enjoy the unique experience of seeing over 2,500 animals in their naturalistic nighttime habitats.</p>
-                                    <p>"Intially i was a little afriad to enter Night Safari, but it was an enjoyable evening we had with my family. Being able to see the animals upclose"</p>
-                                    <br>- Jourdan Copperfield , United Kingdom
+                                    <br><br>
+                                    <p><i>"Intially i was a little afriad to enter Night Safari, but it was an enjoyable evening we had with my family. Being able to see the animals upclose"</i>- Jourdan Copperfield</p>
 
                                 </div>
                                 <div>
@@ -365,8 +368,8 @@
                                     <br><br>
                                     <p>Charming visitors the world over since taking flight in 1971, Jurong Bird Park is one of the most renowned bird sanctuaries with some of the largest free-flying aviaries in the world.</p>
                                     <p>In habitats that mirror their naturalistic environments, Jurong Bird Park is home to the colours of the world, as Asia’s largest bird park with a collection of more than 5,000 birds across 400 species</p>
-                                    <p>"I have never seen that many birds upclose and personal before.All in all it was a great trip to Singapore especially Jurong Bird Park"</p>
-                                    <br> - Zheng Wei, Japan
+                                    <br><br>
+                                    <p><i>"I have never seen that many birds upclose and personal before.All in all it was a great trip to Singapore especially Jurong Bird Park"</i>- Zheng Wei, Japan</p>
 
                                 </div>
                                 <div>
@@ -434,8 +437,8 @@
                                     <br><br>
                                     <p>Gardens by the Bay brings to life NParks' vision of creating a City in a Garden</p>
                                     <p>The Gardens captures the essence of Singapore as the premier tropical Garden City with the perfect environment in which to live and work - making Singapore a leading global city of the 21st century.</p>
-                                    <p>"Gardens by the Bay is the most magical attraction in Singapore. Filled with rare plants i was astounded as i walk in"</p>
-                                    <br> - Sean Kawai , Japan
+                                    <br><br>
+                                    <p><i>"Gardens by the Bay is the most magical attraction in Singapore. Filled with rare plants i was astounded as i walk in"</i>- Sean Kawai , Japan</p>
                                 </div>
                                 <div>
                                     <p><!-- Opening Hours -->
