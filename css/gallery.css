@@ -86,3 +86,9 @@ body {
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 }
+/* End of Plants Hover Effect */
+
+/* Etc */
+.wording {
+    opacity:0;
+}
