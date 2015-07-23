@@ -84,7 +84,7 @@ body {
 }
 
 .xmg_1-1:hover, .xmg_1-2:hover, .xmg_1-3:hover, .xmg_2-1:hover, .xmg_2-2:hover, .xmg_2-3:hover, .xmg_3-1:hover, .xmg_3-2:hover, .xmg_3-3:hover {
-    -webkit-filter: blur(3px) grayscale(0.3) opacity(0.9) sepia(0.2);
+    -webkit-filter: blur(0px) grayscale(0.4) opacity(0.9) sepia(0.6);
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
