@@ -8,6 +8,29 @@
 <!-- Stylesheets -->
 <link rel="stylesheet" type="text/css" href="css/navbar.css">
 <link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" href="css/screen.css">
+<link rel="stylesheet" href="css/grid.css">
+<style>
+    .container { max-width: 90em; }
+
+    /* you only need width to set up columns; all columns are 100%-width by default, so we start
+       from a one-column mobile layout and gradually improve it according to available screen space */
+      .feature, .info { width: 33.33%; }
+
+      #map-canvas {
+        width: 100%;
+        height: 400px;
+      }
+
+    @media only screen and (max-width : 770px) {
+      .content { width: 66.66%; }
+      .sidebar { width: 100%; }
+      .info    { width: 100%; }
+      #map-canvas {
+        height: 300px;
+      }
+    }
+  </style>
 
 <!-- Favicon -->
 <link rel="icon" type="image/png" href="images/panda.png" sizes="32x32" />
@@ -23,7 +46,7 @@
     <a href="#" id="menu-icon"></a>
     <ul>
       <li><a href="#" class="current">Home</a></li>
-      <li><a href="#">Attraction</a></li>
+      <li><a href="attraction.html">Attraction</a></li>
       <!-- TODO: Drop down
       Singapore Zoo
       River Safari
@@ -31,18 +54,65 @@
       Jurong Bird Park
       Garden By The Bay
     -->
-      <li><a href="#">Parks</a></li>
-      <li><a href="#">WildLife</a></li>
+      <li><a href="park.html">Parks</a></li>
+      <li><a href="#wildlife.html">WildLife</a></li>
       <!-- TODO: Drop down
       Animals
       Plants
     -->
-      <li><a href="#">Contact Us</a></li>
-      <li><a href="#">Blog</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+      
     </ul>
   </nav>
 </header>
-<body>
+<section>
+<div class="container">
 
-</body>
-</html>
+  <div class="row col">
+    <h1>East Coast Park</h1>
+  </div>
+
+    <div class="col sidebar">
+
+      <!-- Picture -->
+      <img src="images/ecpark.jpg"/>
+      <p class="desc">Evening at East Coast Park</p>
+
+      <div class="row">
+        <div class="col info">
+          <h4>Experience</h4>
+          <p>East Coast Park is one of Singapore's most treasured urban getaways, offering an invigorating and exciting diversity of sporting, dining and recreational activities. With the theme “Recreation for All”, the park has an activity for everyone.</p>
+        </div>
+
+        <div class="col info">
+          <h4>What to Look Out!</h4>
+
+          <p>Families and friends can sit back, relax and enjoy picnics under the swaying coconut palms, Casuarinas and Ketapangs, or have a fun stay at the holiday chalet available in the park. For those looking for action, there are myriad sporting activities such as beach volleyball, cycling, cable skiing and various water sports as well as an Xtreme SkatePark.</p>
+        </div>
+        <div class="col info">
+          <h4>How to Get There</h4>
+
+          <p>Nearest Bus stops: 92289 (Regent Bowl), 92191 (Opp CP C3), 92199 (Tennis Ctr), 93181 (Opp CP C4), 93189 (Opp Victoria JC), 93179 (Island Resort S’pore), 93171 (Opp Island Resort S’pore), 93169 (Bef CP D5), 93161 (Opp Pond), 93159 (Cable Ski Pk), 93151 (Opp Cable Ski Park), 92251 (Opp Singa Inn), 92261 (Opp Playground @ Big Splash), 91101 (Tg Katong Flyover), 91111 (CP B1)</p>
+        </div>
+      </div>
+      <!-- Google Maps -->
+      <div id="map-canvas"></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script>
+      function initialize() {
+        var mapCanvas = document.getElementById('map-canvas');
+        var mapOptions = {
+          center: new google.maps.LatLng(1.4144, 103.9031),
+          zoom: 8,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        var map = new google.maps.Map(mapCanvas, mapOptions)
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+    </html>
